@@ -20,7 +20,7 @@ public class AppTest
     {
         System.out.println("Test: " + ctx.getCurrentXmlTest().getName() +
                 ", Method: " + Thread.currentThread().getStackTrace()[1].getMethodName());
-        assertTrue( true );
+        assertTrue( true ); //
 
     }
 
@@ -32,7 +32,7 @@ public class AppTest
         assertTrue( true );
     }
 
-    @Test(priority = 2, dependsOnMethods = "loginTest", groups = "pageTests")
+    @Test(priority = 2, dependsOnMethods = "loginTest", groups = {"pageTests"})
     public void pageTestCase01(ITestContext ctx)
     {
         System.out.println("Test: " + ctx.getCurrentXmlTest().getName() +
@@ -40,14 +40,14 @@ public class AppTest
         assertTrue( true );
     }
 
-    @Test(priority = 2, dependsOnMethods = "loginTest", groups = "pageTests")
+    @Test(priority = 2, dependsOnMethods = "loginTest", groups = {"pageTests"})
     public void pageTestCase02(ITestContext ctx)
     {
         System.out.println("Test: " + ctx.getCurrentXmlTest().getName() +
                 ", Method: " + Thread.currentThread().getStackTrace()[1].getMethodName());
         assertTrue( true );
     }
-    @Test (priority = 2, dependsOnMethods = "loginTest", groups = "pageTests")
+    @Test (priority = 2, dependsOnMethods = "loginTest", groups = {"pageTests"})
     public void pageTestCase03(ITestContext ctx)
     {
         System.out.println("Test: " + ctx.getCurrentXmlTest().getName() +
